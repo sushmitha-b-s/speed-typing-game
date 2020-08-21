@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 const useSpeedTypingGame = () => {
-  const TIME_REMAINING = 30
+  const TIME_REMAINING = 60
   const INITIAL_WORD_COUNT = 0
 
   const [text, setText] = useState('')
