@@ -2,7 +2,7 @@
 
 ## Deployed version
 
-- [Check out the deployed version here](#)
+- [Check out the deployed version here](https://speed-typing-game-12.netlify.app/)
 
 ## About the project
 
