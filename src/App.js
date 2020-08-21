@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './styles/index.scss'
 
 function App() {
@@ -10,6 +9,7 @@ function App() {
   const [timeRemaining, setTimeRemaining] = useState(TIME_REMAINING)
   const [isGameStarted, setIsGameStarted] = useState(false)
   const [wordCount, setWordCount] = useState(INITIAL_WORD_COUNT)
+  const textRef = useRef(null)
 
   const handleChange = (e) => {
     const { value } = e.target
@@ -28,10 +28,12 @@ function App() {
     setTimeRemaining(TIME_REMAINING)
     setWordCount(INITIAL_WORD_COUNT)
     setText('')
+
+    textRef.current.disabled = false
+    textRef.current.focus()
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const endGame = () => {
+  const endGame = (e) => {
     setWordCount(calculateWords(text))
     setIsGameStarted(false)
   }
@@ -57,6 +59,7 @@ function App() {
             name="text"
             value={text}
             onChange={handleChange}
+            ref={textRef}
             placeholder={
               isGameStarted
                 ? 'start typing here...'
