@@ -6,7 +6,7 @@
 
 ## About the project
 
-The speed typing game is the front-end application where user's can test how many words they can type in a minute. This is a very fun game and it challenges you the most. Do you want to give it a try? Click on the above link and get started 😉.
+The speed typing game is the front-end application where the users can test how many words they can type in a minute. This is an enjoyable game and it challenges you the most. Do you want to give it a try? Click on the above link and get started 😉.
 
 ## Technologies used
 
