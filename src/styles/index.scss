@@ -1,0 +1,112 @@
+$background: #f5f5f5;
+$containerBg: #000000;
+$textColor: #008000;
+$textFocus: #c0757c;
+$placeholderColor: #2b2a2a;
+$disabledColor: #d3d3d3;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Prosto One', cursive;
+  background-color: $background;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .game {
+    background-color: $containerBg;
+    width: 1000px;
+    max-width: 90%;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: $textColor;
+
+    .game__title {
+      padding: 0.5rem;
+      margin: 1rem auto 1.5rem;
+      text-transform: capitalize;
+    }
+
+    .game__content {
+      .game__content__text {
+        width: 60%;
+        max-width: 80%;
+        height: 200px;
+        max-height: 50vh;
+        outline: none;
+        border-radius: 10px;
+        padding: 1rem;
+        font-size: 1.25rem;
+        background-color: $textColor;
+        color: $containerBg;
+
+        &::selection {
+          color: none;
+          background: none;
+        }
+        /* For Mozilla Firefox */
+        &::-moz-selection {
+          color: none;
+          background: none;
+        }
+
+        &:disabled {
+          background-color: $disabledColor;
+        }
+
+        &::placeholder {
+          color: $placeholderColor;
+          text-transform: uppercase;
+        }
+
+        &:focus {
+          border: 2px solid $textColor;
+        }
+      }
+
+      .game__timeRemaining,
+      .game__wordCount {
+        margin: 1.5rem auto;
+        letter-spacing: 1px;
+      }
+
+      .game__startBtn {
+        text-transform: uppercase;
+        padding: 0.6rem 1.3rem;
+        border-radius: 5px;
+        border: none;
+        background-color: $textColor;
+        color: $containerBg;
+        font-size: 1rem;
+        outline: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
+
+        &:disabled {
+          background-color: $disabledColor;
+          color: #747474;
+          cursor: initial;
+        }
+      }
+
+      .game__wordCount {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
