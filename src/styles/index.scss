@@ -3,6 +3,7 @@ $containerBg: #000000;
 $textColor: #008000;
 $textFocus: #c0757c;
 $placeholderColor: #2b2a2a;
+$disabledColor: #d3d3d3;
 
 * {
   margin: 0;
@@ -49,6 +50,10 @@ body {
         background-color: $textColor;
         color: $containerBg;
 
+        &:disabled {
+          background-color: $disabledColor;
+        }
+
         &::placeholder {
           color: $placeholderColor;
           text-transform: uppercase;
@@ -80,6 +85,12 @@ body {
         &:hover,
         &:focus {
           cursor: pointer;
+        }
+
+        &:disabled {
+          background-color: $disabledColor;
+          color: #747474;
+          cursor: initial;
         }
       }
 
