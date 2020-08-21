@@ -50,6 +50,16 @@ body {
         background-color: $textColor;
         color: $containerBg;
 
+        &::selection {
+          color: none;
+          background: none;
+        }
+        /* For Mozilla Firefox */
+        &::-moz-selection {
+          color: none;
+          background: none;
+        }
+
         &:disabled {
           background-color: $disabledColor;
         }

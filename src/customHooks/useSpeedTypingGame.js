@@ -37,6 +37,10 @@ const useSpeedTypingGame = () => {
     setIsGameStarted(false)
   }
 
+  const disableKeys = (e) => {
+    e.preventDefault()
+  }
+
   useEffect(() => {
     if (timeRemaining > 0 && isGameStarted) {
       setTimeout(() => {
@@ -56,6 +60,7 @@ const useSpeedTypingGame = () => {
     timeRemaining,
     startGame,
     wordCount,
+    disableKeys,
   }
 }
 

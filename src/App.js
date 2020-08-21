@@ -11,6 +11,7 @@ function App() {
     timeRemaining,
     startGame,
     wordCount,
+    disableKeys,
   } = useSpeedTypingGame()
 
   return (
@@ -31,6 +32,9 @@ function App() {
             }
             className="game__content__text"
             disabled={!isGameStarted}
+            onCopy={disableKeys}
+            onPaste={disableKeys}
+            onCut={disableKeys}
           />
 
           <h3 className="game__timeRemaining">
