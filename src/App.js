@@ -45,7 +45,9 @@ function App() {
             start game
           </button>
 
-          <h3 className="game__wordCount">word count: {wordCount}</h3>
+          <h3 className="game__wordCount">
+            word count: {wordCount ? wordCount : '???'}
+          </h3>
         </div>
       </main>
     </div>
